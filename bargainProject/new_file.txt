@@ -1,0 +1,84 @@
+-- phpMyAdmin SQL Dump
+-- version phpStudy 2014
+-- http://www.phpmyadmin.net
+--
+-- 主机: 127.0.0.1
+-- 生成日期: 2018-02-02 06:56:01
+-- 服务器版本: 5.5.36-log
+-- PHP 版本: 5.5.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- 数据库: `xiaoniao`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `cmf_activity_user`
+--
+
+CREATE TABLE IF NOT EXISTS `cmf_activity_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `aid` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
+  `from_user` varchar(255) DEFAULT NULL COMMENT '用户标示',
+  `nickname` varchar(255) DEFAULT '' COMMENT '微信昵称',
+  `username` varchar(255) DEFAULT '' COMMENT '用户名称',
+  `mobile` varchar(255) DEFAULT NULL COMMENT '用户手机号',
+  `createtime` varchar(255) DEFAULT '' COMMENT '参与时间',
+  `remark` text COMMENT '备注',
+  `day_num` int(11) DEFAULT '0' COMMENT '日参与次数',
+  `total_num` int(11) DEFAULT '0' COMMENT '总参与次数',
+  `per_num` int(11) DEFAULT '0' COMMENT '个人参与次数',
+  `update_time` int(11) DEFAULT '0' COMMENT '更新日期',
+  `avatar` varchar(255) DEFAULT NULL COMMENT '头像',
+  `pid` int(11) DEFAULT '0' COMMENT '关联关系的父id',
+  `pname` varchar(255) DEFAULT NULL COMMENT '推荐人姓名',
+  `course` varchar(5000) DEFAULT NULL COMMENT '课程-团购专属',
+  `thumb` longtext COMMENT '附件-喝彩专用',
+  `award_num` int(11) DEFAULT '0' COMMENT '中奖次数',
+  `price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '价格',
+  `status` tinyint(3) DEFAULT '0' COMMENT '状态',
+  `listorder` int(11) DEFAULT '0' COMMENT '排序',
+  `parent_msg` text COMMENT '给父母寄语—母亲节专用',
+  `teacher_msg` text COMMENT '给老师寄语',
+  `class` varchar(200) DEFAULT NULL COMMENT '班级',
+  `age` varchar(32) DEFAULT NULL COMMENT '年龄',
+  `school` varchar(32) DEFAULT NULL COMMENT '学校名字',
+  `is_pay` tinyint(4) DEFAULT '0' COMMENT '是否支付',
+  `out_tradeno` varchar(500) DEFAULT NULL COMMENT '交易编号',
+  `pay_time` int(11) DEFAULT '0' COMMENT '支付时间',
+  `pay_amount` decimal(11,2) DEFAULT NULL COMMENT '支付金额',
+  `course_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`,`aid`),
+  UNIQUE KEY `forindex` (`aid`,`id`) USING HASH,
+  KEY `aid_index` (`aid`) USING HASH
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='活动参与用户' AUTO_INCREMENT=623 ;
+
+--
+-- 转存表中的数据 `cmf_activity_user`
+--
+
+INSERT INTO `cmf_activity_user` (`id`, `aid`, `from_user`, `nickname`, `username`, `mobile`, `createtime`, `remark`, `day_num`, `total_num`, `per_num`, `update_time`, `avatar`, `pid`, `pname`, `course`, `thumb`, `award_num`, `price`, `status`, `listorder`, `parent_msg`, `teacher_msg`, `class`, `age`, `school`, `is_pay`, `out_tradeno`, `pay_time`, `pay_amount`, `course_id`) VALUES
+(566, 203, 'orNswwnPnJ4z4UDVZ9L29yeHCD2o', 'Sia .', '孙金霞', '15036070072', '1517214529', NULL, 0, 0, 0, 0, 'http://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erUpTj4N5jAicySrZTLNsU4QKlZocYPhFOL1xXR2dboAajVbOwVYmChLk4OeqYkIb2e2oqWibKticLmg/132', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 0),
+(567, 202, 'orNswwnPnJ4z4UDVZ9L29yeHCD2o', 'Sia .', '孙金霞', '15036070072', '1517214629', NULL, 0, 0, 0, 0, 'http://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erUpTj4N5jAicySrZTLNsU4QKlZocYPhFOL1xXR2dboAajVbOwVYmChLk4OeqYkIb2e2oqWibKticLmg/132', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 0),
+(610, 201, 'oUbHL4scDESLsgKdqRc9pbTc7fSk', 'Sia .', '孙金霞', '15036070072', '1517297947', NULL, 0, 0, 0, 0, 'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoHyQIpiclDPMO1lLX0ySh0WU5CwNfNNryiaicx1UP7cURiasov73fwFWYsPAibdAbqia1yKiaCmYUbp1W1A/0', 0, NULL, '绘画课', NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 17),
+(616, 202, 'oUbHL4qwqVR-tpoqiEUQvdtm1XVQ', '奋斗青年', '王佳', '15670121542', '1517301680', NULL, 0, 0, 0, 0, 'https://wx.qlogo.cn/mmopen/vi_32/iaDXltFylKJvibZ6u5fDcqZ5XibDvhgiaLk7cniaCSuaumQ8vbBzQGEzIFZC7UTLNDom6A3ycl0fleIibamGsRrKxN5w/0', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 0),
+(617, 202, 'oUbHL4hPC-IId5jZQv3ZBgCdS59g', '石中玉', '石玉良', '18703612752', '1517309185', NULL, 0, 0, 0, 0, 'https://wx.qlogo.cn/mmopen/vi_32/VUwqJbA06mXVoVdx4UuM6Ueuiak8eegJ0ozwLa2jcWBHJxCa1p47icUjkribXicLrZczULJo7O1QfEM80eMwHvYKkw/0', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 0),
+(618, 202, 'oUbHL4gZR8DspE6lvOCMFnOz_3zE', 'A大山教育陈老师15236121837', '测试', '17745678901', '1517322195', NULL, 0, 0, 0, 0, 'https://wx.qlogo.cn/mmopen/vi_32/YdeHMefdejic8XVh3dibn9T6nEk74YTV9G18GzgvQsGy25P0dZhiaE39nZI5Libs1MtMCPa0mAU3UBlMq1At3icQSCg/0', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 0),
+(619, 201, 'orNswwpT7tSWgQzQw3lLb1BNDGcA', 'Foley匠', '刘福利', '18911678600', '1517354430', NULL, 0, 0, 0, 0, 'http://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJgIr4Xto6dkQl4cRSegicxW1WeQ8K1MvyGDR6TcuKGtwEJOf1vbV74LhUXsBBTl2Sfnz1wGRmuMyA/132', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 16),
+(620, 202, 'oUbHL4tDjRun4-oDzrtb0pJ8YWw8', 'Foley匠', '刘福利', '18911678600', '1517355540', NULL, 0, 0, 0, 0, 'https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEI8dNSB5Bic0REAibzazWNnhibxZnFuSsToWsJh5iaMzpsJN0iaWHPjHShskk8DZTjCeGVEicSaZaY68dtQ/0', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 0),
+(621, 206, 'oA7Rg1KLeVhknOlGLxxsBU2B_7RA', '小鸟智联石中玉', '1121212', '12121212', '1517551757', NULL, 0, 0, 0, 0, 'http://wx.qlogo.cn/mmopen/vi_32/v1jSJBU1VDJFgVIVEXFx4KMqoBecU8RGZkABU3k2n4Kch1BArZmuicnGsOJNwmARiak2ao331nW19I3QicBwYyaQw/132', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 0),
+(622, 206, 'orNswwmT8-c9UTx-7vgLl_Ow6cIM', '下奕站等我', '张三', '18703612752', '1517551823', NULL, 0, 0, 0, 0, 'http://wx.qlogo.cn/mmopen/vi_32/bJKaEJYMOc7c0u2NeicqES4sEQOW5bEBRzwptqbsG0qgEqCPMwqrAOEeFdUYHr6KazbJ9ZCokfN1AMrxYTz5Hfw/132', 0, NULL, NULL, NULL, 0, '0.00', 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, 0);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>抽奖</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css?v=2005" />
+		<script src="../js/jquery.js"></script>
+	</head>
+
+	<body>
+		<div class="award">
+			<div class="award-container">
+				<div class="show-ewm">
+					<div class="hidden" style="background: #000;opacity: 0.6;z-index: 1200;  width: 100%; height: 100%;"></div>
+					<div class="tk">
+						<form class="ajax_form forms" action="{:cmf_url('activity/weihelp/user_register',array('aid'=>$activity['id']),true,'xiaoniao.geekaijia.com')}" method="post">
+							<div class="form-shuju">
+								<span> 姓&nbsp; &nbsp;名</span> <input style="margin-left: 5.5%;" type="text" id="username" name="username" placeholder="请输入姓名" required="required" /><br />
+								<span>手机号</span> <input style="margin-left: 5%;" type="tel" name="mobile" id="mobile" placeholder="请输入手机号" required="required" />
+								<button class="js-ajax-submit">保存</button>
+								<img class="close" id="close" src="../images/close.png" alt="" />
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="show-fail">
+					<div class="hidden" style="background: #000;opacity: 0.6;z-index: 1200;  width: 100%; height: 100%;"></div>
+					<div class="fail-but">
+						<div class="fail">
+							<p class="fail-tishi">您没有抽中<span>再接再厉</span></p>
+							<button class="zhidao">我知道了</button>
+							<img class="close" id="close" src="../images/close.png" alt="" />
+						</div>
+					</div>
+
+				</div>
+				<div class="show-success">
+					<div class="hidden" style="background: #000;opacity: 0.6;z-index: 1200;  width: 100%; height: 100%;"></div>
+					<div class="fail-but">
+						<div class="fail">
+							<p class="fail-tishi">恭喜您获得<span class="allJiang"></span></p>
+							<p class="watch-gift">去我的奖品里查看领取</p>
+							<button class="zhidao">我知道了</button>
+							<img class="close" id="close" src="../images/close.png" alt="" />
+						</div>
+					</div>
+
+				</div>
+				<div class="head-banner">
+					<img src="../images/banner.png" alt="" />
+				</div>
+				<div class="award-title">
+					<h3>幸运大转盘</h3>
+				</div>
+				<div class="dial">
+					<div class="g-lottery-box">
+						<img class="pao" src="../images/ly-plate-c.gif" alt="" />
+						<img class="playbtns" src="../images/pointer.png" alt="" />
+						<div class="playbtn">
+							<div class="jiangxiang">
+								<img class="turn" src="../images/turn.png" alt="" />
+								<p class="thanks">谢谢参与 </p>
+								<p class="one"><span>一等奖</span><img src="../images/ten.png" alt="" /></p>
+								<p class="two"><span>二等奖</span><img src="../images/ten.png" alt="" /></p>
+								<p class="three"><span>三等奖</span><img src="../images/ten.png" alt="" /></p>
+								<p class="four"><span>四等奖</span><img src="../images/ten.png" alt="" /></p>
+								<p class="five"><span>五等奖</span><img src="../images/ten.png" alt="" /></p>
+							</div>
+						</div>
+
+					</div>
+					<div class="turn-back">
+						<img src="../images/turn-back.png" alt="" />
+					</div>
+
+				</div>
+				<div class="have">
+					<p class="takes">已有<span>102</span>人 參加</p>
+					<p class="chance">您今天还有<span class="playnum">></span>次机会</p>
+				</div>
+				<div class="footer">
+					<!--<img class="tab" src="../img/tab-back.png" alt="" />-->
+					<ul class="footer-ul">
+						<div class="xian1"></div>
+						<li>活动说明</li>
+						<div class="xian2"></div>
+						<li>我的奖品</li>
+						<div class="xian3"></div>
+					</ul>
+					<div class="footer-head ">
+						<div class="award-list active">
+							<div class="active-time">
+								<h4>活动时间:</h4>
+								<p style="margin: 1% 0;">2017-12-20 00:00 --- 2018-12-20 23:59</p>
+							</div>
+							<h4>奖项设置:</h4>
+							<p>一等奖：价值￥1999牛排五人份(1个)</p>
+							<p>二等奖：价值￥999牛排三人份(1个)</p>
+							<p>三等奖：价值￥99牛排五一人份(1个)</p>
+							<p>(所有产品请在2018年12月20日前领取)</p>
+						</div>
+						<div class="award-list">
+							<div class="active-time">
+								<h4>我获得的奖品</h4>
+								<p>一等奖</p>
+								<p>二等奖</p>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="botter">
+					<p>小鸟智联提供技术支持</p>
+					<p>xiaoniao.geekaijia.com</p>
+				</div>
+				<div class="share">
+					<div class="share-bac">
+						<span>分享</span>
+					</div>
+				</div>
+				<div class="invites">
+					<div class="hiddens" style="background: #000;opacity: 0.6;z-index: 1200;  width: 100%; height: 100%;"></div>
+					<div class="invites-head">
+						<div class="head-top">
+							<img class="jiantou" src="../images/fenxiangjt.png" alt="" />
+						</div>
+						<div class="head-bootom">
+							<div class="right-top">1. 点击右上角<img class="shenglue" src="../images/shenglue.png" alt="" /></div>
+							<div class="right-top">2. 点击<img class="fenxiang" src="../images/fenxiang.png" alt="" />分享</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$(function() {
+			var $btn = $('.playbtn');
+			var playnum = 3; //初始次数，由后台传入	
+			$('.playnum').html(playnum);
+			var isture = 0;
+			var data = Math.floor((Math.random() * 6));
+			var clickfunc = function() {
+
+				//data为随机出来的结果，根据概率后的结果
+
+//								var index = 1;
+//								data = index;
+				//			console.log(data);
+
+				switch(data) {
+					case 1:
+						rotateFunc(1, 0, '谢谢参与!');
+						break;
+					case 2:
+						rotateFunc(2, 60, '一等奖');
+						break;
+					case 3:
+						rotateFunc(3, 120, '二等奖');
+						break;
+					case 4:
+						rotateFunc(4, 180, '三等奖');
+						break;
+					case 5:
+						rotateFunc(5, 240, '四等奖');
+						break;
+					case 6:
+						rotateFunc(6, 300, '五等奖');
+						break;
+				}
+			};
+
+			$('.playbtns').click(function() {
+				if(isture) return; // 如果在执行就退出
+				isture = true; // 标志为 在执行				
+				if(playnum <= 0) { //当抽奖次数为0的时候执行
+					alert("没有次数了");
+					$('.playnum').html(0);
+					isture = false;
+				} else { //还有次数就执行
+					playnum = playnum - 1; //执行转盘了则次数减1
+					if(playnum <= 0) {
+						playnum = 0;
+					}
+					$('.playnum').html(playnum);
+					clickfunc();
+				}
+			});
+			var rotateFunc = function(awards, angle, text) {
+				isture = true;
+				$btn.stopRotate();
+				$btn.rotate({
+					angle: 0,
+					duration: 4000, //旋转时间
+					animateTo: angle + 1440, //让它根据得出来的结果加上1440度旋转
+					callback: function() {
+						isture = false; // 标志为 执行完毕
+						//						alert(text);
+						if(data == 1) {
+							$('.show-fail').show();
+						} else {
+							$('.show-success').show();
+							$('.allJiang').html(text);
+						}
+					}
+				});
+			};
+		});
+		
+	</script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/index.js"></script>
+	<script src="../js/jquery.rotate.min.js"></script>
+
+</html>

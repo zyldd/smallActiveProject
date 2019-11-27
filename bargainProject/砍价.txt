@@ -1,0 +1,32 @@
+1.未注册，非好友分享。
+   接口地址：url = {:cmf_url('activity/weiprice/user_register',array('aid'=>$activity['id']),true,'xiaoniao.geekaijia.com')}
+   立即参与---参数：
+   username,  用户名
+   mobile ,手机号
+   aid  活动ID
+
+2.已注册，非好友分享
+
+    按钮显示方式：邀请好友。
+
+3.好友分享，未注册
+
+    按钮显示方式：帮TA砍价，
+      接口地址：URL = "{:cmf_url('activity/weiprice/wei_price',array('aid'=>$activity['id']),true,'xiaoniao.geekaijia.com')}"
+       aid 活动ID  {$activity['id']}
+       uid 好友ID {$friend.id}
+    我要参与（注册）
+
+4.好友分享，已注册
+    按钮显示方式：帮忙砍价
+	接口地址：URL = "{:cmf_url('activity/weiprice/wei_price',array('aid'=>$activity['id']),true,'xiaoniao.geekaijia.com')}"
+       aid 活动ID  {$activity['id']}
+       uid 好友ID {$friend.id}
+     我的砍价：跳转到一个url url = {:cmf_url('activity/weiprice/index',array('aid'=>$activity['id']),true,'xiaoniao.geekaijia.com')};
+
+5.砍价记录
+  
+  <foreach name="friend_list" item="vo">'
+	<div>{$vo.nickname}----{$vo.avatar} ---{$vo.total_num} ---{$vo.createtime|date="Y-m-d H:i:s",###}</div>
+  </foreach>
+    
