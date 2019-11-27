@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="../css/vote.css" />
+		<title>投票</title>
+		<script type="text/javascript">
+			(function(win, doc) {
+				if(!win.addEventListener)
+					return;
+				var html = document.documentElement;
+
+				function setFont() {
+					var cliWidth = html.clientWidth;
+					if(cliWidth > 750) {
+						cliWidth = 750;
+					}
+					html.style.fontSize = 100 * (cliWidth / 750) + 'px';
+				}
+				win.addEventListener('resize', setFont, false);
+				setFont();
+			})(window, document);
+		</script>
+	</head>
+
+	<body>
+		<div class="voteWrap">
+			<div class="container">
+				<div class="power-success">
+						<div class="hidden" style="background: #000;opacity: 0.5;z-index: 1200;  width: 100%; height: 100%;"></div>
+						<div class="power-back">
+							<div class="power-head">
+								<img src="../images/chenggong.png" alt="" />
+							</div>
+							<div class="power-main">
+								<span style="display: block;">恭喜您</span>
+								<span>报名成功</span>
+							</div>
+							<div class="power-bottom">
+								<button class="Iknow">我知道了</button>
+							</div>
+						</div>
+					</div>
+					<div class="power-fail">
+						<div class="hidden hiddenes" style="background: #000;opacity: 0.5;z-index: 1200;  width: 100%; height: 100%;"></div>
+						<div class="power-back">
+							<div class="power-head">
+								<img class="shibaiImg" src="../images/shibai.png" alt="" />
+							</div>
+							<div class="power-main">
+								<span style="display: block;">很遗憾</span>
+								<span>报名失败</span>
+							</div>
+							<div class="power-bottom">
+								<button class="Iknow">关闭</button>
+							</div>
+						</div>
+					</div>
+				<div class="head">
+					<img src="../images/votebanner.png" alt="" />
+					<div id="CountMsg" class="HotDate">
+						<img src="../images/zhongbiao.png" alt="" />
+						<span>活动<span>结束</span>倒计时</span>
+						<span><b id="t_d"></b>天</span>
+						<span><b id="t_h"></b>时</span>
+						<span><b id="t_m"></b>分</span>
+						<span><b id="t_s"></b>秒</span>
+					</div>
+				</div>
+				<div class="main">
+					<div class="hasBao applyHasBao">
+						<p>已报名 <span>1000</span></p>
+						<p class="CanPeole">参与人次 <span>1600</span></p>
+						<p>访问量 <span>5000</span></p>
+					</div>
+					<div class="applyForm">
+						<form action="">
+							<div class="applyName">
+								<span>姓名</span> <input type="text" name="" id="" placeholder="请输入姓名" />
+							</div>
+							<div class="applyName">
+								<span>手机</span> <input type="phone" name="" id="" placeholder="请输入手机号" />
+							</div>
+							<div class="applyName">
+								<span class="xuan">上传照片</span>
+								<div class="shangchuan_one">
+									<a href="javascript:uploadOneImage('图片上传','#thumbnail');" style="display: inline-block;">
+										<img src="../images/xiangji.png" id="thumbnail-preview" width="50" style="cursor: pointer" />
+									</a>
+								</div>
+							</div>
+							<div class="applyName">
+								<span class="xuan">参赛宣言</span><textarea name="Declaration" placeholder="留下个性宣言" rows="4" cols="30"></textarea>
+							</div>
+							<button type="button">保存</button>
+						</form>
+					</div>
+					<div class="share">
+						<div class="share-bac">
+							<span>分享</span>
+						</div>
+					</div>
+					<div class="invites">
+						<div class="hiddens" style="background: #000;opacity: 0.6;z-index: 1200;  width: 100%; height: 100%;"></div>
+						<div class="invites-head">
+							<div class="head-top">
+								<img class="jiantou" src="../images/fenxiangjt.png" alt="" />
+							</div>
+							<div class="head-bootom">
+								<div class="right-top">1. 点击右上角<img class="shenglue" src="../images/shenglue.png" alt="" /></div>
+								<div class="right-top">2. 点击<img class="fenxiang" src="../images/fenxiang.png" alt="" />分享</div>
+							</div>
+						</div>
+					</div>
+					<div class="botter">
+						<p>小鸟智联提供技术支持</p>
+						<p>xiaoniao.geekaijia.com</p>
+					</div>
+				</div>
+				<div class="bottomBar">
+					<ul class="barUl">
+						<li class="barClass">
+							<a href="voteIndex.html">
+								<span class="backImg "></span>
+								<span class="ClassWenZi ">首页</span>
+							</a>
+						</li>
+						<li class="barClass">
+							<a href="ranking.html">
+								<span class="backImg backImg1"></span>
+								<span class="ClassWenZi">排行</span>
+							</a>
+						</li>
+						<li class="barClass">
+							<a href="apply.html">
+								<span class="backImg backImg2"></span>
+								<span class="ClassWenZi">报名</span>
+							</a>
+						</li>
+						<li class="barClass">
+							<a href="rule.html">
+								<span class="backImg backImg3"></span>
+								<span class="ClassWenZi">规则</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/vote.js"></script>
+	<script type="text/javascript">
+		var end = "2018/2/16";
+		var endTime = new Date(end);
+		//var endTime = new Date("2018/01/22 14:35:33");
+		var nowTime = new Date();
+		var t = endTime - nowTime;
+		//alert("xx:"+endTime);
+		function getRTime() {
+			nowTime = new Date();
+			t = endTime.getTime() - nowTime.getTime();
+			if(t > 0) {
+				var d = Math.floor(t / 1000 / 60 / 60 / 24);
+				var h = Math.floor(t / 1000 / 60 / 60 % 24);
+				var m = Math.floor(t / 1000 / 60 % 60);
+				var s = Math.floor(t / 1000 % 60);
+			} else {
+				var d = '0';
+				var h = '0';
+				var m = '0';
+				var s = '0';
+			}
+
+			if(d < 10) {
+				document.getElementById("t_d").innerHTML = '0' + d;
+			} else {
+				document.getElementById("t_d").innerHTML = d;
+			}
+			if(h < 10) {
+				document.getElementById("t_h").innerHTML = '0' + h;
+			} else {
+				document.getElementById("t_h").innerHTML = h;
+			}
+			if(m < 10) {
+				document.getElementById("t_m").innerHTML = '0' + m;
+			} else {
+				document.getElementById("t_m").innerHTML = m;
+			}
+			if(s < 10) {
+				document.getElementById("t_s").innerHTML = '0' + s;
+			} else {
+				document.getElementById("t_s").innerHTML = s;
+			}
+
+		}
+		getRTime();
+		setInterval(getRTime, 1000);
+	</script>
+
+</html>

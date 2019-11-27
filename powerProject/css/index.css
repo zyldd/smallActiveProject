@@ -1,0 +1,352 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 750px;
+	margin: 0 auto;
+	min-width: 280px;
+	font-size: 0.2em;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.box-wrap {
+	background: url(../img/background.png);
+	height: 100%;
+}
+
+.head img,
+.main,
+.main-head img {
+	width: 100%;
+}
+
+.main-head,.container{
+	position: relative;
+}
+
+.main-position {
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 30%;
+	bottom: 0;
+}
+
+.main-position>p {
+	font-size: 1.5em;
+	color: #FDE9D1;
+}
+
+.main-position>h3 {
+	font-size: 2em;
+	color: #FDE9D1;
+}
+
+.main-foot {
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 74%;
+}
+
+.main-foot>h4 {
+	margin-top: 6%;
+	font-size: 0.9em;
+	color: #E3192D;
+	font-weight: normal;
+	position: relative;
+}
+
+.main-foot button {
+	border: none;
+	background: #FFE9C7;
+	color: #E3192D;
+	width: 70%;
+	font-size: 1.3em;
+	line-height: 2.6em;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 9%;
+}
+
+.footer {
+	margin: 0 2%;
+	margin-top: 31%;
+	height: 100%;
+	background: url(../img/tab-bottom.png) no-repeat;
+	background-size: 100% 100%;
+	padding-top: 1%;
+	padding-bottom: 10%;
+}
+
+.footer-ul,.award-ul {
+	overflow: hidden;
+	padding-left: 0;
+	height: 100%;
+	padding: 0 4%;
+	padding-bottom: 1%;
+}
+
+.footer-ul li,.award-ul li {
+	float: left;
+	width: 31%;
+	line-height: 2.2em;
+	text-align: center;
+	background: #C2393B;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.award-ul li{
+	background: none;
+	position: relative;
+}
+.award-ul li img{
+	width: 5em;
+	height: 5em;
+}
+.award-ul li span{
+	position: absolute;
+	left: 36%;
+	top: 43%;
+	font-size: 0.8em;
+	color: #C2393B;
+}
+
+.active-rule,
+.active-time,.award-list {
+	color: #C2393B;
+	padding: 0 9%;
+	font-weight: normal;
+}
+.award-list{
+	line-height: 2.5em;
+}
+.active-time {
+	margin-top: 3%;
+}
+
+.active-rule h4,
+.active-time h4 {
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.partner {
+	font-size: 1.2em;
+}
+
+.attend {
+	margin: 2% 0;
+}
+
+.botter {
+	padding: 5% 0;
+	text-align: center;
+	color: #FFE9C7;
+}
+/*帮助助力*/
+
+.main-foot>h4 >img{
+	width: 1.8em;
+	height: 1.8em;
+	position: absolute;
+	left: 28%;
+	margin-top: -2px;
+}
+/*排行榜*/
+.watch_num{
+	height: 2em;
+	line-height: 2em;
+	width: 750px;
+	font-size: 1.1em;
+	position: fixed;
+	z-index: 600;
+}
+.watch-back{
+	background: #fff;
+	width: 750px;
+	position: fixed;
+	top: 0;
+	height: 2em;
+	opacity: 0.8;
+	z-index: 500;
+}
+.watch-wenzi{
+	position: fixed;
+	top: 0;
+	width: 750px;
+	z-index: 800;
+	font-size: 1.2em;
+}
+.watch-wenzi p{
+	display: inline-block;
+}
+.watch-wenzi p span{
+	color: orangered;
+}
+
+.footer-head{
+	display: none;
+}
+.footer-head.active{
+	display: block;
+}
+.footer-head table{
+	padding: 0 3%;
+	width: 95%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 2.2em;
+}
+.footer-head table .tr-back{
+	background: #fff;
+	width: 100%;
+}
+.tr-back td{
+	width: 20%;
+}
+/*弹出框*/
+.show-ewm{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 1000;
+}
+.show-ewm .tk{
+	position: absolute;
+	top:18%;
+	width: 75%;
+	height: 36%;
+	left: 0;
+	right: 0;
+	margin:  auto;
+}
+.ban-top{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	right: 0;
+	margin:  auto;
+}
+.ban-top img{
+	width: 100%;
+	height: 150%;
+}
+.ban-top .baise{
+	position: absolute;
+	left: 0;	
+	bottom: 0;
+	right: 0;
+	top: 124%;
+	margin: auto;
+}
+.tan-input{
+	width: 100%;
+	height:40%;
+	position: absolute;
+	left: 0;	
+	bottom: 0;
+	right: 0;
+	top: 20%;
+	margin: auto;
+	text-align: center;
+}
+.message{
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 3%;
+	color: #EE3148;
+	font-size: 0.7em;
+}
+.show-ewm .tk input{
+	border: none;
+	border: solid 1px #eee;
+	line-height: 1.9em;
+	width: 60%;
+	margin-left: 2%;
+	text-indent: 4%;
+	font-size: 0.9em;
+}
+.show-ewm .tk span{
+	color: #666;
+	font-size: 0.9em;
+}
+.show-ewm  button{
+	border: none;
+	background: #F7A788;
+	color: #fff;
+	width: 80%;
+	line-height: 2em;
+	position: absolute;
+	left: 0;	
+	right: 0;
+	bottom: 13%;
+	margin: auto;
+	height: 2em;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.show-ewm .tk #close{
+	width: 1.5em;
+	height:3em;
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: -48%;
+	margin: auto;
+	cursor: pointer ;
+}
+/*分享按钮*/
+.share{
+	position: absolute;
+	right: 0;
+	top: 17%;	
+	bottom: 0;
+	width: 4em;
+	height: 4em;
+	line-height:4em;
+	text-align: center;	
+	color: #fff;
+	cursor: pointer;
+}
+.share-bac{
+	width: 3.5em;
+	height: 3.5em;
+	background: #333;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+.share span{
+	position: absolute;
+	top: -8%;
+	right: 30%;
+}

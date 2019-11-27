@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="../css/vote.css" />
+		<title>投票</title>
+		<script type="text/javascript">
+			(function(win, doc) {
+				if(!win.addEventListener)
+					return;
+				var html = document.documentElement;
+
+				function setFont() {
+					var cliWidth = html.clientWidth;
+					if(cliWidth > 750) {
+						cliWidth = 750;
+					}
+					html.style.fontSize = 100 * (cliWidth / 750) + 'px';
+				}
+				win.addEventListener('resize', setFont, false);
+				setFont();
+			})(window, document);
+		</script>
+	</head>
+
+	<body>
+		<div class="voteWrap">
+			<div class="container">
+				<div class="main">
+					<div class="participant votersDetail">
+						<h2>张益达</h2>
+						<div class="voters">
+							<img src="../images/voter1.png" alt="" />
+							<div class="piaoshuWrap">
+								<p class="piaoshu">
+									<span class="poll"><b>999</b>票</span>
+									<span class="hao">388484号</span>
+								</p>
+								<div class="CanXuan">
+									<span>参赛宣言：</span>
+									<p>少年我看你骨骼惊奇，不如借一步说话？</p>
+								</div>
+							</div>
+							<button class=" voteBtn">投票</button>
+						</div>
+					</div>
+					<div class="share">
+						<div class="share-bac">
+							<span>分享</span>
+						</div>
+					</div>
+					<div class="invites">
+						<div class="hiddens" style="background: #000;opacity: 0.6;z-index: 1200;  width: 100%; height: 100%;"></div>
+						<div class="invites-head">
+							<div class="head-top">
+								<img class="jiantou" src="../images/fenxiangjt.png" alt="" />
+							</div>
+							<div class="head-bootom">
+								<div class="right-top">1. 点击右上角<img class="shenglue" src="../images/shenglue.png" alt="" /></div>
+								<div class="right-top">2. 点击<img class="fenxiang" src="../images/fenxiang.png" alt="" />分享</div>
+							</div>
+						</div>
+					</div>
+					<div class="botter">
+						<p>小鸟智联提供技术支持</p>
+						<p>xiaoniao.geekaijia.com</p>
+					</div>
+				</div>
+				<div class="bottomBar">
+					<ul class="barUl">
+						<li class="barClass">
+							<a href="voteIndex.html">
+								<span class="backImg "></span>
+								<span class="ClassWenZi ">首页</span>
+							</a>
+						</li>
+						<li class="barClass">
+							<a href="ranking.html">
+								<span class="backImg backImg1"></span>
+								<span class="ClassWenZi">排行</span>
+							</a>
+						</li>
+						<li class="barClass">
+							<a href="apply.html">
+								<span class="backImg backImg2"></span>
+								<span class="ClassWenZi">报名</span>
+							</a>
+						</li>
+						<li class="barClass">
+							<a href="rule.html">
+								<span class="backImg backImg3"></span>
+								<span class="ClassWenZi">规则</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</body>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/vote.js"></script>
+
+</html>

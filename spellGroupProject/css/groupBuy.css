@@ -1,0 +1,683 @@
+* {
+	box-sizing: border-box;
+}
+
+
+html{
+	font-size: 100% !important;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 750px;
+	width: 100%;
+	margin: 0 auto;
+	min-width: 320px;
+	height: auto;
+	box-shadow: 0 1px 15px #ccc;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.head img {
+	display: block;
+}
+
+.head img,
+.main,
+.main-head img {
+	width: 100%;
+}
+
+.main {
+	height: 100%;
+	padding-top: 20px;
+	background: #F8F4E6;
+	padding-bottom: 60px;
+}
+
+.container {
+	position: relative;
+}
+
+.head {
+	padding-top: 44px;
+}
+
+.HotDate {
+	background: url(../images/daojishi.png) no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	width: 92%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	height: 45px;
+	line-height: 45px;
+}
+
+.HotDate span b {
+	color: #FFE9C7;
+	background: #fff;
+	padding: 2px 3px;
+	border-radius: 3px;
+	margin-right: 4px;
+	font-size: 13px;
+	color: #333;
+}
+
+
+/*排行榜*/
+
+.watch_num {
+	max-width: 750px;
+	width: 100%;
+	position: fixed;
+	z-index: 900;
+	overflow: hidden;
+	line-height: 45px;
+	height: 45px;
+}
+
+.watch-wenzi {
+	text-align: center;
+	max-width: 750px;
+	background: #000;
+	color: #fff;
+	width: 100%;
+	z-index: 800;
+}
+
+.watch-wenzi p {
+	display: inline-block;
+	color: #fff;
+	font-size: 16px;
+}
+
+.watch-wenzi p span {
+	color: orangered;
+}
+
+
+/*拼团玩法*/
+
+.wanfa,
+.teSe {}
+
+.wanfa h3,
+.teSe h3,
+.activityIntroduce h3,.myGroup h3 {
+	width: 90%;
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+	color: #444;
+	font-weight: normal;
+	padding-left: 5px;
+	border-left: solid 3px #f8b862;
+	margin: 25px auto;
+}
+
+.wanfabuzhou,
+.specialCourse,
+.coming,
+.activeWrap,.myGroup-head {
+	background: #fff;
+	border: solid 1px #f8b862;
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 25px 15px;
+}
+
+.wanfa1,
+.wanfa2 {
+	width: 32%;
+	background: url(../images/wanfa1.png) no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+	float: left;
+	height: 50px;
+}
+
+.wanfa2 {
+	background: url(../images/wanfa2.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.wanfa3 {
+	width: 36%;
+	background: url(../images/wanfa3.png) no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+	height: 50px;
+	float: left;
+}
+
+.wanfa1 .wanfaP1,
+.wanfa2 .wanfaP2,
+.wanfa3 .wanfaP3 {
+	display: inline-block;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	width: 100%;
+	font-size: 14px;
+	padding-left: 12%;
+}
+
+.wanfa1 .wanfaP1 {
+	padding-left: 0;
+}
+
+.wanfa1 .wanfaP1 b,
+.wanfa2 .wanfaP2 b,
+.wanfa3 .wanfaP3 b {
+	color: #ff3e3e;
+	font-size: 26px;
+	display: inline-block;
+	width: 20px;
+	margin-right: 5px;
+	text-align: center;
+	float: left;
+}
+
+
+/*特色课程*/
+
+.heightClass {
+	width: 100%;
+	background: #f89b84;
+	color: #fff;
+	border-radius: 10px;
+	padding: 10px 20px;
+	overflow: hidden;
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+.heightClass-left {
+	float: left;
+}
+
+.heightClass-right {
+	float: right;
+	margin-top: 22px;
+}
+
+.fense {
+	color: #FF4500;
+}
+/*我的拼团*/
+.myGroupLeft{
+	overflow: hidden;
+	position: relative;
+	height: 45px;
+}
+.myGroupLeft img{
+	float: left;
+	width: 45px;
+	height: 45px;
+	margin-left: 5px;
+	margin-right: 10px;
+}
+.myGroupLeft .hasKai{
+	float: left;
+	display: inline-block;
+	color: #999;
+	font-size: 12px;
+	height: 20px;
+	overflow: hidden;
+	margin-top: 2px;
+}
+.myGroupLeft .hasKai b{
+	font-size: 14px;
+	display: inline-block;
+	width: 60px;
+	height: 18px;
+	overflow: hidden;
+	float: left;
+}
+.myGroupLeft .hasKai .hasCans{
+	float: left;
+	display: inline-block;
+	height: 18px;
+	margin-top: 1px;
+	float: left;
+}
+.createTime{
+	display: inline-block;
+	font-size: 12px;
+	color: #999;
+}
+.myGroupLeft .hasKai .groupNum{
+	color: #FF3E3E;
+}
+
+.myGroupLeft .groupPeople{
+	display: inline-block;
+	text-align: center;
+	width: 24%;
+	height: 40px;
+	font-size: 12px;
+	color: #fff;
+	line-height: 40px;
+	border: none;
+	background: #F89B84;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+	right: 0;
+	top: 2px;
+}
+
+
+/*正在开团的小伙伴板块*/
+.coming {
+	margin-top: 20px;
+	background: #fff;
+	overflow: hidden;
+	text-align: center;
+}
+
+.coming-left {
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	float: left;
+	background: #FFE9C7;
+	color: #F6B662;
+	width: 100%;
+	border-radius: 5px;
+	margin: 5px 0;
+	border: solid 1px #F8B862;
+}
+
+.coming>p {
+	font-size: 12px;
+	margin-bottom: 20px;
+	color: #F6B662;
+}
+
+.coming-left img {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin: 0 10px;
+	margin-top: 5px;
+}
+
+.coming-left span {
+	float: left;
+	display: inline-block;
+	line-height: 40px;
+	font-size: 12px;
+}
+
+.coming-left button {
+	width: 24%;
+	float: right;
+	height: 40px;
+	font-size: 11px;
+	color: #fff;
+	line-height: 30px;
+	border: none;
+	background: #F89B84;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+
+/*活動介绍*/
+
+.activeWrap {
+	padding-bottom: 15px;
+}
+
+.activeWrap .introduce {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.activeWrap .introduce p {
+	font-size: 14px;
+	color: #333;
+	line-height: 22px;
+}
+
+.yqWrap {
+	font-size: 14px;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	bottom: 0;
+	max-width: 750px;
+	padding: 0 5%;
+	background: #fff;
+	opacity: 0.8;
+}
+
+.yqWrap button {
+	width: 120px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.yqWrap .yaoqing {
+	float: left;
+}
+
+.yqWrap .yaoqing,
+.yqWrap .kaituan {
+	color: #FFFFFF;
+	border: none;
+	background: #F89B84;
+	line-height: 32px;
+	border-radius: 4px;
+}
+
+.yqWrap .kaituan {
+	background: #FF4500;
+	float: right;
+}
+
+/*分享按钮*/
+.share{
+	position: fixed;
+	top: 55px;
+	cursor: pointer;
+	border-radius: 50%;
+	background: #000;
+	opacity: 0.7;
+}
+.share-bac{
+	cursor: pointer;
+	width:45px;
+	color: #fff;
+	height: 45px;	
+	opacity: 1;
+	text-align: center;
+	line-height: 43px;
+}
+/*分享弹出框*/
+.invites{
+	position: fixed;
+	top: 0;
+	max-width: 750px;
+	height: 100%;
+	width: 100%;
+	display: none;
+	z-index:1000;
+}
+.invites-head{
+	max-width: 750px;
+	width: 100%;
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	color: #fff;
+	font-size: 19px;
+	overflow: hidden;
+}
+.invites-head .head-top{
+	overflow: hidden;
+	z-index: 1000;
+	margin-bottom: 10px;
+}
+.invites-head .head-top img{
+	float: right; 
+	width: 25%;
+	margin-right: 25px;
+}
+.invites-head .head-bottom{
+	width: 100%;
+	height: auto;
+}
+.right-top{
+	width: 50%;
+	margin: 10px auto;
+}
+.right-top  img{
+	margin: 0 10px;
+}
+.right-top .shenglue{	
+	width: 25px;
+	height: 6px;
+}
+.right-top .fenxiang{
+	height: 20px;
+	width: 20px;
+}
+/*注册*/
+.show-ewm{
+	position: absolute;
+	top: 0;
+	max-width: 750px;
+	height: 100%;
+	width: 100%;
+	display: none;
+	z-index: 850;
+}
+.show-ewm .tk{
+	position: absolute;
+	top:0%;
+	width: 90%;
+	max-width: 750px;
+	left: 0;
+	right: 0;
+	margin:  auto;
+}
+.ban-top{
+	position: relative;
+	text-align: center;
+	max-width: 750px;
+	width: 90%;
+	left: 0;
+	right: 0;
+	margin:  auto;
+	padding-top: 25%;
+	
+}
+.ban-top img{
+	width: 100%;
+	height: 100%;
+}
+
+.ban-top .baise{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 75%;	
+	max-height: 320px;
+	min-height: 200px;
+}
+
+.forms{
+	position: absolute;
+	text-align: center;
+	max-width: 750px;
+	width:100%;
+	height: 98%;
+	top: 90%;
+	min-height: 220px;
+	max-height: 280px;
+}
+
+.show-ewm .tk input{
+	border: none;
+	border: solid 1px #eee;
+	line-height:36px;
+	height: 36px;
+	width: 60%;
+	font-size: 12px;
+	text-indent: 8px;
+	margin-top: 18px;
+}
+.show-ewm .tk span{
+	display: inline-block;
+	line-height:36px;
+	height: 36px;
+	color: #333;
+	font-size: 14px;
+}
+.show-ewm  button{
+	border: none;
+	background: #F7A788;
+	color: #fff;
+	width: 80%;
+	line-height: 38px !important; 
+	height:38px;
+	margin: 0 auto;
+	cursor: pointer;
+	border-radius: 4px;
+	margin-top: 20px;
+	z-index: 200;
+}
+
+.show-ewm .tk #close{
+	width: 22px;
+	height:37px;
+	position: absolute; 
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	cursor: pointer ;
+}
+/*我的团员页面*/
+.zongGongWrap{
+	background: #eee;
+
+}
+.head{
+	position: relative;
+}
+.youhuiDuo{
+	position: absolute;
+	top: 18%;
+	background: url(../images/banner_wzk2.png) no-repeat;
+	background-size: 100% 100%;
+	left: 0;
+	right: 0;
+	margin:  auto;
+	min-height: 30px;
+	line-height: 24px;
+	width: 40%;
+	color: #FFE9C7;
+}
+.youhuiDuo p,.WuRenJi p{
+	text-align:center ;
+	font-size: 13px;
+}
+.WuRenJi{
+	position: absolute;
+	bottom: 8%;
+	background: url(../images/banner_wzk.png) no-repeat;
+	background-size: 100% 100%;
+	left: 0;
+	right: 0;
+	margin:  auto;
+	min-height: 26px;
+	line-height: 26px;
+	width: 40%;
+	color: #FFE9C7;
+}
+.classPeople{
+	margin: 10px 0;
+}
+.classPeopleHead{
+	overflow: hidden;
+	padding: 8px 15px;
+	background: #fff;
+	line-height: 46px;
+	margin: 10px 0;
+}
+.classPeopleHead img{
+	float: left;
+	margin-left: 5px;
+	margin-right: 10px;
+	width: 40px;
+	height: 40px;
+	margin-top: 3px;
+}
+.classPeopleHead .whoName{
+	color: #333;
+	display: inline-block;
+	width: 20%;	
+	text-align: center;
+	font-size: 14px;
+}
+.classPeopleHead .whoCan{
+	float: right;
+	color: #999;
+	font-size: 13px;
+}
+.zongGong{
+	text-align: center;
+	background: #fff;
+	min-height: 160px;
+}
+.zongGong p{
+	padding-top: 30px;
+	color: #555;
+}
+.zongGong p span{
+	color: #FF4500;
+}
+
+
+
+@media (min-width:504px) {
+	.wanfaP3,
+	.wanfaP2,
+	.wanfaP1 {
+		height: 50px;
+		line-height: 35px;
+	}
+	.HotDate span {
+		font-size: 16px;
+	}
+	.wanfabuzhou,
+	.specialCourse,
+	.coming,
+	.activeWrap,.myGroup-head {
+		padding: 25px;
+	}
+	.activeWrap {
+		padding-bottom: 15px;
+	}
+	.myGroupLeft button,.coming-left button {
+		font-size: 15px ;
+	}
+	.youhuiDuo{
+		height: 45px;
+		line-height: 36px;
+	}
+	.youhuiDuo p{
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,571 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	max-width: 750px;
+	margin: 0 auto;
+	min-width: 280px;
+	font-size: 0.2em;
+	font-family: "微软雅黑";
+}
+button{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	position: relative;
+}
+.head {
+	position: relative;
+}
+.head img {
+	width: 100%;
+}
+.main {
+	height: 100%;
+	padding-bottom: 70px;
+}
+#CountMsg{
+	position: absolute;
+	bottom: 1em;
+	background: #fd4040;
+	padding: 8px 8%;
+	border-radius: 30px;
+	width: 90%;
+	left: 0;
+	right: 0;
+	margin:  auto;
+	font-size: 1.2em;
+	color: #fff;
+	overflow: hidden;
+	text-align: center;
+}
+.HotDate span b {
+	color: #FFE9C7;
+	background: #fff;
+	padding:2px 4px;
+	border-radius: 4px;
+	margin-right: 4px;
+	font-size: 0.8em;
+	color: #000;
+	font-weight: normal;
+}
+.HotDate img{
+	width:7%;
+	float: left;
+}
+.hasBao{
+	padding: 0 20px;
+	margin: 15px 0;
+	overflow: hidden;
+}
+.hasBao p{
+	width: 33%;
+	float: left;
+	font-size: 1.3em;
+	text-align: center;
+}
+.hasBao p span{
+	display: block;
+	font-size: 0.9em;
+	margin-top: 2px;
+}
+.hasBao .CanPeole{
+	border-left:solid 1px #f89b84;
+	border-right:solid 1px #f89b84;
+}
+.SouInput{
+	border: solid 2px #f89b84;
+	height: 3.5em;
+	line-height: 3.5em;
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.SouInput input{
+	border: none;
+	width: 75%;
+	height: 100%;
+	float: left;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	text-indent: 1em;
+	color: #999;
+	font-size: 1em;
+}
+.SouInput button{
+	border: none;
+	width: 25%;
+	float: right;
+	height: 100%;
+	background: #f89b84;
+	cursor: pointer;
+	color: #fff;
+	font-size: 1.3em;
+}
+/*投票*/
+.participant{
+	border: solid 1px #f8b862;
+	width: 92%;
+	margin: 0 auto;
+	border-radius: 15px;
+	padding: 5% 5% 0px 1%;
+	overflow: hidden;
+}
+.voter{
+	float: left;
+	border: solid 1px #f8b862;
+	width: 45%;
+	background: #fef9e0;
+	margin-left: 5%;
+	margin-bottom: 5%;
+}
+.voter img{
+	width: 100%;
+}
+.voter p {
+	font-size: 1.3em;
+	padding: 4px 10px;
+	color: #df851c;	
+}
+.voter p span{
+	float: right;
+}
+.piaoNum{
+	padding:8px 10px;
+	border-top: solid 1px #FFE9C7;
+}
+.piaoNum span{
+	color: #df851c;
+	font-size: 1.6em;
+}
+.piaoNum button{
+	float: right;
+	border: none;
+	color: #fff;
+	background:#f89b84 ;
+	border-radius: 5px;
+	padding:3px  10px;
+	font-size: 1.3em;
+	cursor: pointer;
+}
+/*jishuzhichi*/
+.botter {
+	margin-top: 5%;
+	text-align: center;
+	color: #df851c;
+	font-size: 1.2em;
+}
+/*底部导航*/
+.bottomBar{
+	border-top: solid 1px #eee;
+	padding: 8px 0 5px 0;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background: #fff;
+	max-width: 750px;
+}
+.barUl{
+	overflow: hidden;
+}
+.barClass{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.barClass a{
+	color: #333;
+	display: inline-block;
+	padding: 0 1.3em;
+}
+.barClass a .backImg{
+	background: url(../images/shouye2.png) no-repeat;
+	background-size:100% 100% ;
+	display: block;
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0 auto;
+}
+.barClass a .ClassWenZi.actives{
+	color:#DF851C ;
+}
+.barClass a .backImg.active{
+	background: url(../images/shouye.png) no-repeat;
+	background-size:100% 100% ;
+}
+.barClass a .backImg1{
+	background: url(../images/paihang2.png) no-repeat;
+	background-size:100% 100% ;
+}
+.barClass a .backImg1.active{
+	background: url(../images/paihang.png) no-repeat;
+	background-size:100% 100% ;
+}
+.barClass a .backImg2{
+	background: url(../images/baoming2.png) no-repeat;
+	background-size:100% 100% ;
+}
+.barClass a .backImg2.active{
+	background: url(../images/baoming.png) no-repeat;
+	background-size:100% 100% ;
+}
+.barClass a .backImg3{
+	background: url(../images/guize2.png) no-repeat;
+	background-size:100% 100% ;
+}
+.barClass a .backImg3.active{
+	background: url(../images/guize.png) no-repeat;
+	background-size:100% 100% ;
+}
+
+/*排行页面css*/
+.rankingWrap{
+	color: #333;
+}
+.participants{
+	padding: 5%;
+	color: #333;
+}
+.participants table{
+	width: 100%;
+	border-collapse:collapse;
+	font-size: 1.2em;
+}
+.participants tr{
+	border-bottom: solid 1px #ccc;
+}
+.participants .tr-first {
+	width: 100%;
+	border: none;
+}
+.participants  td{
+	text-align: center;
+}
+.participants .tr-two td img{
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0 auto;
+}
+.participants .td-name{
+	position: relative;
+	top: -0.85em;
+	left: 6px;
+}
+.participants .tr-twoTd img{
+	margin-top: 0.45em !important;
+}
+
+/*报名页面css*/
+.applyHasBao{
+	padding: 0;
+}
+.applyForm{
+	padding: 0 11%;
+	font-size: 1.4em;
+}
+.applyForm form .applyName {
+	margin: 1.5em 0;
+	overflow: hidden;
+}
+.applyForm form .applyName span{
+	display: inline-block;
+	width: 25%;
+}
+
+.applyForm form .applyName input{
+	width: 73%;
+	border: none;
+	border: solid 1px #ccc;
+	border-radius: 0.3em;
+	line-height: 2em;
+	text-indent: 1em;
+}
+.applyForm form .applyName textarea{
+	width: 73%;
+	border: none;
+	border: solid 1px #ccc;
+	border-radius: 0.3em;
+	text-indent: 1em;
+	padding-top: 8px;
+	font-size: 0.98em;
+	margin-left: 4.5px;
+}
+.applyForm form .applyName .xuan{
+	float: left;
+}
+.applyForm form button{
+	width: 100%;
+	border: none;
+	color: #fff;
+	background:#f89b84 ;
+	border-radius: 0.3em;
+	line-height: 2.3em;
+	font-size: 1.1em;
+}
+/*输入框placeholder颜色设置*/
+::-webkit-input-placeholder { 
+color:#999;
+}
+:-moz-placeholder {
+color:#999;
+}
+::-moz-placeholder {
+color:#999;
+}
+:-ms-input-placeholder { 
+color:#999;
+}
+/*上传图片*/
+.shangchuan_one{
+	display: inline-block;
+}
+.shangchuan_one a{
+	border:dashed 1px #333 ;
+	padding: 20px;
+	margin-left: 4.5px;
+	border-radius: 5px;
+}
+/*规则*/
+.participantRule{
+	padding:5% 3%;
+	position: relative;
+	overflow: inherit;
+	margin-top: 3.5em;
+}
+.activeRule{
+	padding: 0 5%;
+	font-size: 1.4em;
+	line-height: 1.7em;
+	color: #444;
+}
+.rules{
+	position: absolute;
+	top: -1.3em;
+	background:#f89b84 ;
+	color:#fff;
+	padding: 8px 10px;
+	font-size: 1.4em;
+	border-radius: 0.3em;
+	left: 1.3em;
+}
+.activeRule > h3{
+	margin: 10px 0 15px 0;
+	font-size: 1.25em;
+	font-weight: 500;
+}
+/*投票详情*/
+.votersDetail{
+	padding: 3% 4%;
+	position: relative;
+	padding-bottom: 10%;
+}
+.voters{
+	width: 100%;
+	border: solid 1px #f8b862;
+}
+.votersDetail h2 {
+	text-align: center;
+	margin-bottom: 3%;
+	color: #df851c;
+	font-size: 1.9em;
+	font-weight: normal;
+}
+.voters img{
+	width: 100%;
+	display: block;
+}
+.piaoshuWrap{
+	background: #fef9e0;
+	padding-bottom: 18%;
+}
+.voters .piaoshu{
+	color: #df851c;
+	font-size: 1.6em;
+	padding: 3% 5%;
+	overflow: hidden;
+	line-height: 1.8em;
+}
+.voters .piaoshu .hao{
+	float: right;
+}
+.voters .piaoshu .poll{
+	font-size: 1.4em;
+}
+.CanXuan{
+	padding: 0 5%;
+	color: #df851c;
+	border-top: solid 2px #FFE9C7;
+	font-size: 1.4em;
+	line-height: 1.6em;
+	padding-top: 6px;
+}
+
+.voteBtn{
+	position: absolute;
+	background:#f89b84 ;
+	color:#fff;
+	padding: 6px 20px;
+	font-size: 1.8em;
+	border-radius: 0.3em;
+	border: none;
+	left: 0;
+	right: 0;
+	bottom: 1.1em;
+	margin:  auto;
+}
+/*分享按钮*/
+.share{
+	position: fixed;
+	top: 10px;
+	cursor: pointer;
+	border-radius: 50%;
+	background: #000;
+	opacity: 0.8;
+	right: 10px;
+}
+.share-bac{
+	cursor: pointer;
+	width:40px;
+	color: #fff;
+	height: 40px;	
+	opacity: 1;
+	text-align: center;
+	line-height: 40px;
+	font-size: 1.3em;
+}
+/*分享弹出框*/
+.invites,.power-success,.power-fail{
+	position: fixed;
+	top: 0;
+	max-width: 750px;
+	height: 100%;
+	width: 100%;
+	display: none;
+	z-index:1000;
+}
+.invites-head{
+	max-width: 750px;
+	width: 100%;
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	color: #fff;
+	font-size: 19px;
+	overflow: hidden;
+}
+.invites-head .head-top{
+	overflow: hidden;
+	z-index: 1000;
+	margin-bottom: 10px;
+}
+.invites-head .head-top img{
+	float: right; 
+	width: 25%;
+	margin-right: 25px;
+}
+.invites-head .head-bottom{
+	width: 100%;
+	height: auto;
+}
+.right-top{
+	width: 50%;
+	margin: 10px auto;
+}
+.right-top  img{
+	margin: 0 10px;
+}
+.right-top .shenglue{	
+	width: 25px;
+	height: 6px;
+}
+.right-top .fenxiang{
+	height: 20px;
+	width: 20px;
+}
+/*报名成功*/
+
+.power-back{
+	max-width: 750px;
+	width: 100%;
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	color: #fff;
+	font-size: 19px;
+	overflow: hidden;
+}
+.power-back{
+	margin-top: 125px;
+	background: url(../images/receive.png) no-repeat;
+	background-size:80% 90%;
+	text-align: center;
+	background-position-x: 50%;
+	height: 43%;	
+	padding-top: 25px;
+}
+@media  (min-width:361px ) {
+	.power-back{
+		height: 40%;
+	}
+}
+@media  (min-width:500px ) {
+	.power-back{
+		height: 55%;
+	}
+}
+.power-head{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+.power-head img{
+	width: 45%;
+	height: 100%;
+	margin: 0 auto;
+}
+.power-head .shibaiImg{
+	width: 64px ;
+	height: 84px;
+}
+.power-main {	
+	font-size: 12px;
+	color: #E3192D;
+	width: 50%;
+	margin: 15px auto;
+}
+.power-bottom{
+	width: 50%;
+	margin: 0 auto;
+}
+.power-bottom button{
+	width: 90%;
+	height:30px;
+	line-height: 30px;
+	border: none;
+	border-radius: 8px;
+	background: #E3192D;
+	color: #FDE9D1;
+}
